@@ -57,7 +57,7 @@ Git博大精深，不是几个简单介绍就可以掌握的，这里只是记�
 
 参考资料：
 
-[progit_v2.1.17.pdf](https://github.com/Programmer-QiMingYang/PersonalRecord/tree/master/ReferencesDocument/progit_v2.1.17.pdf)
+progit_v2.1.17
 
-[Git教程-廖雪峰.pdf](https://github.com/Programmer-QiMingYang/PersonalRecord/tree/master/ReferencesDocument/Git教程-廖雪峰.pdf)
+Git教程-廖雪峰
 
