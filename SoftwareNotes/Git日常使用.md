@@ -57,7 +57,7 @@ Git博大精深，不是会几个命令就可以掌握的，这里只是记录�
 
 参考资料：
 
-[progit_v2.1.17](https://pan.baidu.com/s/1YHivJoww9TGwwwPCGYj3qg),提取密码：2ld2
+progit_v2.1.17
 
-[Git教程-廖雪峰](https://pan.baidu.com/s/1U382d1Jf4VLFHdiLA1iJgw),提取密码：yoib
+Git教程-廖雪峰
 
