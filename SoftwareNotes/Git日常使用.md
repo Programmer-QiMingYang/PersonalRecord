@@ -36,10 +36,12 @@
 #### 2、克隆远程仓库
 
 ```bash
-git clone 远程仓库地址	#直接克隆远程仓库
+git clone 远程仓库地址	#直接克隆远程仓库，是克隆所有的历史版本，也可以将地址协议改成git协议面对某些失败的克隆。
 git add . 	#将所有改动的文件添加到仓库
 git commit -m "提交信息"	#提交到本地仓库
 git push -u origin master 	#推送到远程仓库
+git clone -b develop 地址 #从develop分支下克隆项目
+git clone 地址 -depth 1 #克隆最近一次的commit，适用于项目比较大，我们克隆只需要项目，不需要以往的历史版本，depth 1代表克隆深度
 ```
 
 #### 3、生成公钥和私钥
