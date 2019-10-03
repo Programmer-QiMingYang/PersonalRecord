@@ -53,7 +53,22 @@ ssh-keygen -t rsa -C "Your Email"
 #在电脑用户目录下面会有。ssh目录，里面有Id_rsa和Id_rsa.pub两个文件；Id_rsa是私钥，Id_rsa.pub是公钥，将公钥内容复制，在github->Settings->SSH andGPG keys->SSH keys->New SSH keys,title随便写，key就是公钥内容，黏贴过来即可。最后Add SSH key即刻完成。
 ```
 
-#### 4、参考资料
+#### 4、常用命令
+
+```bash
+git log #查看版本信息
+git reset --hard 版本号 #版本回退，这个回退不会保留回退之前的版本
+git push -f #提交更改，一般在使用完reset之后会使用这个命令
+
+git revert #git revert是用于“反做”某一个版本，以达到撤销该版本的修改的目的。比如，我们commit了三个版本（版本一、版本二、 版本三），突然发现版本二不行（如：有bug），想要撤销版本二，但又不想影响撤销版本三的提交，就可以用 git revert 命令来反做版本二，生成新的版本四，这个版本四里会保留版本三的东西，但撤销了版本二的东西。
+
+```
+
+参考：
+
+1. [Git恢复之前版本的两种方法reset、revert（图文详解）](https://blog.csdn.net/yxlshk/article/details/79944535)
+
+#### 5、参考资料
 
 Git博大精深，不是会几个命令就可以掌握的，这里只是记录了在web开发中经常使用的那点毫末。
 
