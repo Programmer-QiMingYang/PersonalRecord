@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<div>
+			<h1 style="color:red">有错误了</h1><br/>
+			错误请求地址：<span th:text="${url}">发生错误的请求</span><br/>
+			错误信息描述：<span th:text="${exception.message}">错误的信息</span><br/>
+		</div>
+		<hr />
+		<div>
+			<h4>紧急联系</h4><br/>
+			联系人：<span th:text="#{person.name}">联系人</span><br/>
+			联系方式：<span th:text="#{person.email}">联系方式</span><br/>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!--引入静态资源文件js/css  -->
+<script th:src="@{/static/js/test.js}"></script>
+</head>
+<body>
+	<h1>thymeleaflabels thymeleaf常用标签测试</h1>
+
+	<div>
+		<h2>thymeleaf基本使用方式</h2>
+		姓名:<span th:text="${user.name}">姓名</span><br /> 密码:<span
+			th:text="${user.password}">密码</span><br /> 年龄:<span
+			th:text="${user.age}">年龄</span><br />
+		<!-- 日期 -->
+		生日:<span th:text="${user.birthday}">生日</span><br />
+		<!-- thymeleaf格式化日期 -->
+		生日:<span th:text="${#dates.format(user.birthday,'yyyy-MM-dd')}">格式化生日</span><br />
+		<!-- text -->
+		描述:<span th:text="${user.desc}">text描述</span><br />
+		<!-- utext -->
+		描述:<span th:utext="${user.desc}">utext描述</span><br />
+	</div>
+
+	<div th:object="${user}">
+		<h2>thymeleaf对象使用方式</h2>
+		姓名:<span th:text="*{name}">姓名</span><br /> 密码:<span
+			th:text="*{password}">密码</span><br /> 年龄:<span th:text="*{age}">年龄</span><br />
+		<!-- 日期 -->
+		生日:<span th:text="*{birthday}">生日</span><br />
+		<!-- thymeleaf格式化日期 -->
+		生日:<span th:text="*{#dates.format(birthday,'yyyy-MM-dd')}">格式化生日</span><br />
+		<!-- text -->
+		描述:<span th:text="*{desc}">text描述</span><br />
+		<!-- utext -->
+		描述:<span th:utext="*{desc}">utext描述</span><br />
+	</div>
+	<div>
+		<h2>URL使用</h2>
+		<a href="http://www.baidu.com">普通方式的链接百度</a> <br />
+		<a th:href="@{http://www.baidu.com}">th方式的链接百度</a><br />
+
+	</div>
+	
+	<div>
+		<h2>form表单</h2>
+		<form th:action="@{/thymeleaflabels/postform}" th:object="${user}" th:method="post">
+			<input type="text" th:field="*{name}" />
+			<input type="text" th:field="*{age}" />
+			<input type="submit"/>
+		</form>
+	</div>
+
+	<div >
+		<h2>th:if判断的使用</h2>
+	
+		<span th:text="${user.name}"></span>
+		<span th:text="${user.age}"></span>
+		</div><br/>
+	<div th:if="${user.age}==18" >年龄等于18</div><br/>
+	<div th:if="${user.age} gt 22" >年龄大于22</div><br/>
+	<div th:if="${user.age} lt 35" >年龄小于35</div><br/>
+	<div th:if="${user.age} ge 30" >年龄大于等于30</div><br/>
+	<div th:if="${user.age} le 29" >年龄小于等于29</div><br/>
+	
+	<div>
+		<h2>选择框的使用</h2>
+		<select>
+			<option>请选择</option>
+			<option th:selected="${user.name} eq '张三'">张三</option>
+			<option th:selected="${user.name} eq '李四'">李四</option>
+			<option th:selected="${user.name} eq '王二麻子'">王二麻子</option>
+		</select>
+	</div>
+	
+	<div>
+		<h2>th:each的使用</h2>
+		<table border="1">
+			<tr>
+				<th colspan="6">hr专用员工基本信息表</th>
+			</tr>
+			<tr>
+				<th>姓名</th>
+				<th>密码</th>
+				<th>生日</th>
+				<th>年龄</thd>
+				<th>自我介绍</th>
+				<th>备注</th>
+			</tr>
+			<tr th:each="person:${userList}">
+				<td th:text="${person.name}"></td>
+				<td th:text="${person.password}"></td>
+				<td th:text="${#dates.format(person.birthday,'yyyy-MM-dd')}"></td>
+				<td th:text="${person.age}"></td>
+				<td th:utext="${person.desc}"></td>
+				<td th:text="${person.age gt 30}?(${person.age lt 35}?快到35了:立即劝退了):挺好"></td>				
+			</tr>
+		</table>
+	</div>
+	
+	<div>
+		<h1>th:switch和th:case</h1>
+		<div th:switch="${user.name}">
+			<p th:text="${user.name}"></p>
+			<p th:case="'张三'">程序员</p>
+			<p th:case="#{roles.manager}">高级程序员</p>
+			<p th:case="#{roles.super}">项目总监</p>
+			<p th:case="*">其它</p>
+		</div>
+	</div>
+	
+</body>
+</html>
