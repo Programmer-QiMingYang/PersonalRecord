@@ -10,8 +10,8 @@
     <a href="#三统一结果集封装">三、统一结果集封装</a><br/>
     <a href="#四Jackson常用注解">四、Jackson常用注解</a><br/>
     <a href="#五devtools热启动">五、devtools热启动</a><br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5.1 pom文件添加依赖">5.1 pom文件添加依赖</a><br/>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5.2 Application.properties配置">5.2 Application.properties配置</a><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5.1pom文件添加依赖">5.1 pom文件添加依赖</a><br/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5.2Application.properties配置">5.2 Application.properties配置</a><br/>
 </nav>
 
 
